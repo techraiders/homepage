@@ -13,8 +13,8 @@ on:
       - 'main'
       - 'development-*' #development-new-branch-name
       - 'feature/**' # feature/new-feature/button
-    paths-ignore:
-      - '.github/workflows/*'
+    # paths-ignore:
+    #   - '.github/workflows/*'
 jobs:
   lint:
     runs-on: ubuntu-latest
