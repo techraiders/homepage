@@ -4,13 +4,13 @@ on:
     types:
       - opened
     branches:
-      - main
+      - 'main'
       - 'development-*' # dev-new dev-this-is-new
       - 'feature/**' # feature/new-feature/new/button
   workflow_dispatch:
   push:
     branches:
-      - main
+      - 'main'
       - 'development-*' #development-new-branch-name
       - 'feature/**' # feature/new-feature/button
     paths-ignore:
