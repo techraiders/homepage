@@ -1,5 +1,20 @@
 name: Deploy Project
-on: [push, workflow_dispatch]
+on:
+  pull_request:
+    types:
+      - opened
+    branches:
+      - main
+      - 'development-*' # dev-new dev-this-is-new
+      - 'feature/**' # feature/new-feature/new/button
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - 'development-*' #development-new-branch-name
+      - 'feature/**' # feature/new-feature/button
+    paths-ignore:
+      - '.github/workflows/*'
 jobs:
   lint:
     runs-on: ubuntu-latest
